@@ -7,9 +7,7 @@ import { NewItem } from "../components/NewItem";
 import { AppContext } from "../context";
 
 function AppUI() {
-  const { todosToFind, completeTodo, deleteTodo, loading } = useContext(
-    AppContext
-  );
+  const { todosToFind, completeTodo, deleteTodo, loading } = useContext(AppContext);
 
   return (
     <>

@@ -3,12 +3,11 @@ import { AppContext } from "../../context";
 import './todoCounter.css'
 
 function TodoCounter() {
-  const {total, completed} = useContext(AppContext)
-
+  const {totalTodos, completedTodos} = useContext(AppContext)
   return (
     <>
       <h1 className="subtitle">Your Daily Tasks</h1>
-      <h4 className="caption">Completed {completed} to {total}</h4>
+      <h4 className="caption">Completed {completedTodos} to {totalTodos}</h4>
     </>
   );
 }

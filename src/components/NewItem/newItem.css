@@ -53,5 +53,20 @@
     background: #EAEBF3;
     box-shadow:  8px 8px 16px #dad9d9,
                  -8px -8px 16px #f8f9ff;
+
+    &:hover{
+      border-radius: 50px;
+      background: linear-gradient(145deg, #eaeaea, #EAEBF3);
+      box-shadow:  5px 5px 10px #c7c8cf,
+                    -5px -5px 10px #ffffff;
+      cursor: pointer;
+    }
+
+    &:active{
+      border-radius: 50px;
+      background: #EAEBF3;
+      box-shadow: inset 5px 5px 10px #c7c8cf,
+                  inset -5px -5px 10px #ffffff;
+    }
   }
 }

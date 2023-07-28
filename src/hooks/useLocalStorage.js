@@ -15,7 +15,7 @@ function useLocalStorage(key, defaultValue){
     if(todosFromStorage){
       itemsFound = JSON.parse(todosFromStorage)
     }else{
-      localStorage.setItem(key, defaultValue)
+      localStorage.setItem(key, JSON.stringify(defaultValue))
       itemsFound = defaultValue
     }
     setItems(itemsFound)
@@ -23,7 +23,7 @@ function useLocalStorage(key, defaultValue){
   }, [])
 
   return {
-    items, 
+    items,
     saveItems,
     loading
   }

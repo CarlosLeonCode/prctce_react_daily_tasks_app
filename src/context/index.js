@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react'
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
-const LCLSTORAGEKEY = "yourDailyTasks_V1";
+const LCLSTORAGEKEY = LCLSTORAGEKEY || `YourDailyTasks_${new Date().toLocaleDateString()}`;
 const AppContext = createContext()
 
 function AppProvider({children}){
@@ -38,7 +38,9 @@ function AppProvider({children}){
       todosToFind,
       completeTodo,
       deleteTodo,
-      loading
+      loading,
+      todos,
+      saveTodos
     }}>
       {children}
     </AppContext.Provider>
