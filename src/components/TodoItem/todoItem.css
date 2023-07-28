@@ -1,0 +1,53 @@
+.list-item{
+  list-style: none;
+  border-radius: 8px;
+  background: #EAEBF3;
+  box-shadow:  5px 5px 10px #d7d8e0,
+              -5px -5px 10px #fdfeff;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 4rem 1fr 4rem;
+  place-items: center;
+  border-right: 8px solid #EAEBF3;
+  
+  & .done-btn,
+  & .delete-btn{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 38px;
+    background: #EAEBF3;
+    box-shadow:  6px 6px 12px #d7d8e0,
+                 -6px -6px 12px #fdfeff;
+    border: none;
+    transition: all .2s;
+
+    & svg{
+      color: #9b9ba1;
+    }
+
+    &:hover{
+      border-radius: 50px;
+      background: linear-gradient(145deg, #fafbff, #d3d4db);
+      box-shadow:  5px 5px 10px #c7c8cf,
+                   -5px -5px 10px #ffffff;
+      cursor: pointer;
+    }
+
+    &:active{
+      border-radius: 50px;
+      background: #EAEBF3;
+      box-shadow: inset 5px 5px 10px #c7c8cf,
+                  inset -5px -5px 10px #ffffff;
+    }
+  }
+
+  &.check{
+    box-shadow:  5px 5px 10px #dcdde4,
+                 -5px -5px 10px #f8f9ff;
+    border-right-color: #80d483;
+  }
+
+  &.pendding{
+    border-right-color: #80b0d4;
+  }
+}
