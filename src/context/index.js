@@ -1,10 +1,11 @@
 import React, { createContext, useState } from 'react'
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
-const LCLSTORAGEKEY = LCLSTORAGEKEY || `YourDailyTasks_${new Date().toLocaleDateString()}`;
+const LCLSTORAGEKEY = LCLSTORAGEKEY || `YourDailyTasks_V1`;
 const AppContext = createContext()
 
 function AppProvider({children}){
+  const [openModal, setOpenModal] = useState(false)
   const [searchValue, setSearchValue] = useState("");
   const { 
     items: todos, 
@@ -29,6 +30,12 @@ function AppProvider({children}){
     saveTodos(newTodos);
   };
 
+  const addTodo = text => {
+    
+  }
+
+  const onOpenCloseModal = () => (setOpenModal(!openModal))
+
   return(
     <AppContext.Provider value={{
       totalTodos,
@@ -40,7 +47,9 @@ function AppProvider({children}){
       deleteTodo,
       loading,
       todos,
-      saveTodos
+      saveTodos,
+      openModal,
+      onOpenCloseModal,
     }}>
       {children}
     </AppContext.Provider>

@@ -9,6 +9,7 @@
   grid-template-columns: 4rem 1fr 4rem;
   place-items: center;
   border-right: 8px solid #EAEBF3;
+  width: 36rem;
   
   & .done-btn,
   & .delete-btn{
