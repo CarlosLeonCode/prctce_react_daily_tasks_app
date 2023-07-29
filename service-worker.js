@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/CarlosLeonCode/prctce_react_daily_tasks_app/precache-manifest.8a0fde60b9e82b4b40a79655ba4413c0.js"
+  "/prctce_react_daily_tasks_app/precache-manifest.a1bc2ef2c002bd5bfe9737a21137c237.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/CarlosLeonCode/prctce_react_daily_tasks_app/index.html", {
+workbox.routing.registerNavigationRoute("/prctce_react_daily_tasks_app/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
