@@ -6,7 +6,7 @@
 
 body{
   margin: 0;
-  padding: 6rem;
+  
   background-color: #EAEBF3;
 }
 
@@ -45,5 +45,7 @@ body{
 }
 
 @media(max-width: 640px){
-
+  .card-app{
+    box-shadow: none;
+  }
 }
