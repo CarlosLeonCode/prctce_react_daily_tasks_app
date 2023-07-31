@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react'
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
-const LCLSTORAGEKEY = LCLSTORAGEKEY || `YourDailyTasks_V1`;
+const LCLSTORAGEKEY =  `YourDailyTasks_V1`;
 const AppContext = createContext()
 
 function AppProvider({children}){
@@ -30,8 +30,21 @@ function AppProvider({children}){
     saveTodos(newTodos);
   };
 
-  const addTodo = text => {
-    
+  const addTodo = e => {
+    try {
+      e.preventDefault();
+      const newTask = e.target.querySelector("input").value;
+      if (newTask.trim().length === 0) {
+        console.error("You must write something");
+      } else {
+        saveTodos([...todos, {
+          text: newTask,
+          completed: false
+        }]);
+      }
+    } catch {
+      console.error("Ooops, something bad happend!");
+    }
   }
 
   const onOpenCloseModal = () => (setOpenModal(!openModal))
@@ -50,6 +63,7 @@ function AppProvider({children}){
       saveTodos,
       openModal,
       onOpenCloseModal,
+      addTodo,
     }}>
       {children}
     </AppContext.Provider>

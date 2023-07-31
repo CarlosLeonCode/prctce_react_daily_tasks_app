@@ -10,30 +10,29 @@ function AppUI() {
   const { todosToFind, completeTodo, deleteTodo, loading } = useContext(AppContext);
 
   return (
-    <>
-      <div className="left-side">
-        <NewItem />
+    <div className="card-app">
+      <NewItem />
+      <div className="divisor-container">
+        <hr />
       </div>
-      <div className="right-side">
-        <TodoCounter />
-        <TodoSearcher />
-        <TodoList>
-          {loading && <h1>Loading!!</h1>}
-          {todosToFind.length === 0 && (
-            <span>Hey! it is time to plan your day 😃</span>
-          )}
-          {todosToFind.map((item, ind) => (
-            <TodoItem
-              text={item.text}
-              key={ind}
-              completed={item.completed}
-              onComplete={() => completeTodo(ind)}
-              onDelete={() => deleteTodo(ind)}
-            />
-          ))}
-        </TodoList>
-      </div>
-    </>
+      <TodoCounter />
+      <TodoSearcher />
+      <TodoList>
+        {loading && <h1>Loading!!</h1>}
+        {todosToFind.length === 0 && (
+          <span>Hey! it is time to plan your day 😃</span>
+        )}
+        {todosToFind.map((item, ind) => (
+          <TodoItem
+            text={item.text}
+            key={ind}
+            completed={item.completed}
+            onComplete={() => completeTodo(ind)}
+            onDelete={() => deleteTodo(ind)}
+          />
+        ))}
+      </TodoList>
+    </div>
   );
 }
 

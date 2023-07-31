@@ -8,7 +8,7 @@ function TodoSearcher() {
   return (
     <div className="searcher-wp">
       <input
-        placeholder="Type something here"
+        placeholder="Search a task here"
         className="searcher-input"
         onChange={onChangeField}
         value={searchValue}
