@@ -28,7 +28,8 @@
       color: #646464;
       padding: 0.7rem 1rem;
       border-radius: 30px;
-      width: 25rem;
+      max-width: 25rem;
+      min-width: 18rem;
       transition: all ease-in-out .5s;
     }
 

@@ -20,7 +20,7 @@ function AppUI() {
       <TodoList>
         {loading && <h1>Loading!!</h1>}
         {todosToFind.length === 0 && (
-          <span>Hey! it is time to plan your day 😃</span>
+          <span>Hey! it is time to plan your day!</span>
         )}
         {todosToFind.map((item, ind) => (
           <TodoItem
