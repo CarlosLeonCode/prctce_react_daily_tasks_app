@@ -65,43 +65,43 @@
         fill: #c7c8cf;
       }
     }
-
-    & .develop-by .about{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1rem;
-
-      & .circle-links{
-        display: flex;
-      }
-
-      & .circle-link{
-        background-color: #c7c8cf;
-        margin: 0 .2rem;
-        border-radius: 50%;
-        padding: .5rem;
-        width: 2rem;
-        height: 2rem;
-        display: grid;
-        place-items: center;
-        transition: all .2s;
-      }
-
-      & .circle-link:hover{
-        background-color: #a4a4a4;
-      }
-
-      & .circle-link:hover svg{
-        fill: white;
-      }
-
-      & .circle-link svg{
-        fill: rgb(129, 129, 129);
-        transition: all .2s;
-      }
-    }
   }
+}
+
+.modal-component .card .develop-by .about{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.modal-component .card .develop-by .about .circle-links{
+  display: flex;
+}
+
+.modal-component .card .develop-by .about .circle-link{
+  background-color: #c7c8cf;
+  margin: 0 .2rem;
+  border-radius: 50%;
+  padding: .5rem;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  transition: all .2s;
+}
+
+.modal-component .card .develop-by .about .circle-link .circle-link:hover{
+  background-color: #a4a4a4;
+}
+
+.modal-component .card .develop-by .about .circle-link .circle-link:hover svg{
+  fill: white;
+}
+
+.modal-component .card .develop-by .about .circle-link .circle-link svg{
+  fill: rgb(129, 129, 129);
+  transition: all .2s;
 }
 
 @media(max-width: 640px){
