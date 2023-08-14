@@ -14,7 +14,9 @@ function Modal({children}){
         <button className="close-btn" onClick={onOpenCloseModal}>
           <AiFillCloseCircle />
         </button>
-        {children}
+        <div className="content">
+          {children}
+        </div>
       </div>
     </div>,
     document.getElementById("modalWrapper")

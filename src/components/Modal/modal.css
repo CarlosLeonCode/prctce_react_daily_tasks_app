@@ -14,17 +14,104 @@
     border-radius: 8px;
     background-color: #EAEBF3;
     position: relative;
+    padding: 3rem;
 
     & .close-btn{
       position: absolute;
       top: 1rem;
       right: 1rem;
       border: none;
+      width: 2rem;
+      height: 2rem;
       border-radius: 50%;
       background: #EAEBF3;
       box-shadow:  8px 8px 16px #dad9d9,
                     -8px -8px 16px #f8f9ff;
-      
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+
+    & .close-btn:hover{
+      cursor: pointer;
+      background: linear-gradient(145deg, #eaeaea, #EAEBF3);
+      box-shadow:  5px 5px 10px #c7c8cf,
+                    -5px -5px 10px #ffffff;
+    }
+
+    & .close-btn:active{
+      background: #EAEBF3;
+      box-shadow: inset 5px 5px 10px #c7c8cf,
+                  inset -5px -5px 10px #ffffff;
+    }
+
+    & .content{
+      width: 100%;
+      height: 100%;
+    }
+
+    & .modal-title,
+    & .modal-captions{
+      text-align: center;
+    }
+
+    & .tools-wp{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+
+      & svg{
+        fill: #c7c8cf;
+      }
+    }
+
+    & .develop-by .about{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+
+      & .circle-links{
+        display: flex;
+      }
+
+      & .circle-link{
+        background-color: #c7c8cf;
+        margin: 0 .2rem;
+        border-radius: 50%;
+        padding: .5rem;
+        width: 2rem;
+        height: 2rem;
+        display: grid;
+        place-items: center;
+        transition: all .2s;
+      }
+
+      & .circle-link:hover{
+        background-color: #a4a4a4;
+      }
+
+      & .circle-link:hover svg{
+        fill: white;
+      }
+
+      & .circle-link svg{
+        fill: rgb(129, 129, 129);
+        transition: all .2s;
+      }
+    }
+  }
+}
+
+@media(max-width: 640px){
+  .modal-component{
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .modal-component .card{
+    width: 15rem;
+    height: auto;
   }
 }
