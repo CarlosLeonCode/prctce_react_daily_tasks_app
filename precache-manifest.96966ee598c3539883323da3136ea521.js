@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "7e568358ebe5f455d04a",
-    "url": "/prctce_react_daily_tasks_app/static/css/main.df15586c.chunk.css"
+    "revision": "ad2857edce8b6a69828a",
+    "url": "/prctce_react_daily_tasks_app/static/css/main.5ac16579.chunk.css"
   },
   {
-    "revision": "7e568358ebe5f455d04a",
-    "url": "/prctce_react_daily_tasks_app/static/js/main.7e568358.chunk.js"
+    "revision": "ad2857edce8b6a69828a",
+    "url": "/prctce_react_daily_tasks_app/static/js/main.ad2857ed.chunk.js"
   },
   {
     "revision": "a311b131688e376ca4dc",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/prctce_react_daily_tasks_app/static/js/runtime~main.ff23522a.js"
   },
   {
-    "revision": "b30c05538a24ef4827da800c1c9095c1",
+    "revision": "5ff1d9c2a22ccb3e3c9368f409f6ee6c",
     "url": "/prctce_react_daily_tasks_app/index.html"
   }
 ];
